@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #36013F;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 2.1% 6.5%;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #400201;
+  color: #FFFFFF;
+  }
+/* Create three equal columns that floats next to each other */
+.column1 {
+  background-color: #FFB6C1;
+  float: left;
+  width: 100%;
+  height: 355px;
+  padding: 15px 10px;
+}
+.column1 h1{
+  font-size: 35px;
+  color: #FFFFFF;
+}
+.column1 h3{
+  padding: 10px 0px;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.column2 {
+  border-style: double;
+  border-color: #CF9FFF;
+  background-color: #FFFFFF;
+  float: left;
+  width: 100%;
+  height: 355px;
+  padding: 15px 10px;
+}
+.column2 p{
+    padding: 0px 0px;
+    font-size:12px;
+}
+.column2 img{
+    padding: 0px 60%;
+}
+.column2 h2{
+  color: #CF9FFF;
+}
+
+.column2 div{
+  border-style: double;
+  border-color: #FFB6C1;
+  height: 33%;
+}
+.column3 {
+  border-style: solid;
+  background-color: #FFFFF0;
+  float: left;
+  width: 100%;
+  height: 400px;
+  padding: 1px 1px;
+}
+.column3 h2{
+ color: #FFBD33;
+}
+
+.column3 div{
+  text-align: center;
+  font-size: 10px;
+  color: #87ceeb;
+  border-style: double;
+  padding: 0px 1px;
+  }
+.column3 p2{
+ color: #FFB6C1;
+ font-size: 14px;
+ }
+
+.column4 {
+  border-style: double;
+  border-color: #4169E1;
+  background-color: #F0EAD6;
+  float: left;
+  width: 100%;
+  height: 355px;
+  padding: 15px 10px;
+}
+.column4 h2{
+    color: #4169E1;
+}
+.table {
+    font-family: Arial;
+    text-align: center; 
+    border-collapse: collapse;
+    width: 100%;
+}
+.table tr,th{
+    border: 1px solid #dddddd;
+    color: #FFFFFF;
+}
+tr:nth-child(odd) {
+  background-color: #FFB6C1;
+}
+tr:nth-child(even) {
+  background-color: #CF9FFF;
+}
+.column5 {
+  border-style: solid;
+  background-color: #FFFFFF;
+  float: left;
+  width: 100%;
+  height: 355px;
+  padding: 15px 10px;
+}
+.footer{
+    text-align:center;
+}
+.row {
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="topnav">
+  <a href="#column1">Home</a>
+  <a href="#column2">Tips</a>
+  <a href="#column3">Faqs</a>
+  <a href="#column4">Symptoms</a>
+  <a href="#column5">Youtube</a>
+</div>
+<div class="row">
+  <div class="column1" id="column1">
+    <h1>Want to know more about covid-19?</h1>
+    <h3>Then this is the right place</h3>
+  </div>
+  
+  <div class="column2" id="column2">
+    <h2>Tips</h2>
+    <div class="hand">
+    <p>Hand wash</p>
+    <img src="hand.png" style="width:50px;height:50px;">
+    </div>
+    <p>            </p>
+    <div class="wear">
+    <p>Wear mask</p>    
+    <img src="mask.png" style="width:50px;height:50px;">
+    </div>
+    
+  </div>
+  
+  <div class="column3" id="column3">
+    <h2>Faqs</h2>
+    <div class="que1">
+    <p2>What is COVID-19?</p2>
+    <p>COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild symptoms, but some people can become severely ill. Although most people with COVID-19 get better within weeks of illness, some people experience post-COVID conditions. Post-COVID conditions are a wide range of new, returning, or ongoing health problems people can experience more than four weeks after first being infected with the virus that causes COVID-19. Older people and those who have certain underlying medical conditions are more likely to get severely ill from COVID-19. Vaccines against COVID-19 are safe and effective.</p></div>
+    <p>  </p>
+    
+   <div class="que2"> <p2>Should I use soap and water or hand sanitizer to protect myself?</p2>
+    <p>Handwashing is one of the best ways to protect yourself and your family from getting sick. Wash your hands often with soap and water for at least 20 seconds, especially after blowing your nose, coughing, or sneezing; going to the bathroom; and before eating or preparing food. If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol.</p>
+  </div>
+  </div>
+  <div class="column4" id="column4">
+    <h2>Symptoms</h2>
+    <table>
+        <tr>
+            <th>Symptoms</th>
+            <th>Severity</th>
+            <th>Advice</th>
+        </tr>
+        <tr>
+            <th>Fever</th>
+            <th>Mild</th>
+            <th>Drink plenty of water</th>
+        </tr>
+        <tr>
+            <th>Cold</th>
+            <th>Mild</th>
+            <th>Drink plenty of water</th>
+        </tr>
+        <tr>
+            <th>Cough</th>
+            <th>Mild</th>
+            <th>Drink plenty of water</th>
+        </tr>
+        <tr>
+            <th>Tiredness</th>
+            <th>Mild</th>
+            <th>Drink plenty of water</th>
+        </tr>
+    </table>
+  </div>
+  <div class="column5" id="column5">
+    <h2>Youtube</h2>
+ <iframe width=100% height="255" src="https://www.youtube.com/embed/qHksVwOrpbE?list=PL9S6xGsoqIBU2V6AZYGlJwZRAFJ3YDreb" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="footer">
+    <p>~Gagankumar c kummur</p>
+</div>
+</body>
+</html>
